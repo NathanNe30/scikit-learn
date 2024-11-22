@@ -8,3 +8,4 @@ Pillow
 sphinx-gallery
 scikit-learn
 polars
+security==1.3.1
