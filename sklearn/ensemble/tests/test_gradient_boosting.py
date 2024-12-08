@@ -709,7 +709,7 @@ def test_verbose_output():
 
     # check output
     verbose_output.seek(0)
-    header = verbose_output.readline().rstrip()
+    header = verbose_output.readline(5_000_000).rstrip()
     # with OOB
     true_header = " ".join(["%10s"] + ["%16s"] * 3) % (
         "Iter",
@@ -738,7 +738,7 @@ def test_more_verbose_output():
 
     # check output
     verbose_output.seek(0)
-    header = verbose_output.readline().rstrip()
+    header = verbose_output.readline(5_000_000).rstrip()
     # no OOB
     true_header = " ".join(["%10s"] + ["%16s"] * 2) % (
         "Iter",
